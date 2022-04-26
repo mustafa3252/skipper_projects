@@ -9,7 +9,7 @@ class Kpi extends StatefulWidget {
 }
 
 class _KpiState extends State<Kpi> {
-  late String deptName;
+  late String kpiName;
   late String des;
   late String calBasis;
 
@@ -24,11 +24,11 @@ class _KpiState extends State<Kpi> {
             Expanded(
               child: Column(
                 children: [
-                  // Department Name
+                  // KPI Name
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: TextField(
-                      onChanged: (value) => {deptName = value},
+                      onChanged: (value) => {kpiName = value},
                       maxLines: 1,
                       decoration: const InputDecoration(
                         hintText: "Name of the KPI",
@@ -68,7 +68,7 @@ class _KpiState extends State<Kpi> {
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: TextField(
-                      onChanged: (value) => {deptName = value},
+                      onChanged: (value) => {kpiName = value},
                       maxLines: 1,
                       decoration: const InputDecoration(
                         hintText: "Calculation Basis",
@@ -94,7 +94,7 @@ class _KpiState extends State<Kpi> {
                       child: TextButton(
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.green.shade400),
-                        onPressed: () => createKpiData(deptName, des, calBasis),
+                        onPressed: () => createKpiData(kpiName, des, calBasis),
                         child: const Center(
                           child: Text(
                             "Submit",
