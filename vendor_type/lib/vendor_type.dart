@@ -26,7 +26,7 @@ class _VendorTypeState extends State<VendorType> {
             Expanded(
               child: Column(
                 children: [
-                  // Department Name
+                  // Text input feild for vendor type
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: TextField(
