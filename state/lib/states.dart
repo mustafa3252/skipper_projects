@@ -14,7 +14,7 @@ class _StatesState extends State<States> {
   late String _currentSelectedValue = "Active";
   // ignore: prefer_final_fields
   late String _currentSelectedValuetwo = "India";
-  late String deptName;
+  late String stateName;
 
   int statusValue = 1;
 
@@ -29,11 +29,11 @@ class _StatesState extends State<States> {
             Expanded(
               child: Column(
                 children: [
-                  // Countries
+                  // Tect feild for typing states
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: TextField(
-                      onChanged: (value) => {deptName = value},
+                      onChanged: (value) => {stateName = value},
                       maxLines: 1,
                       decoration: const InputDecoration(
                         hintText: "Name of the State",
@@ -46,7 +46,7 @@ class _StatesState extends State<States> {
                       ),
                     ),
                   ),
-                  // Description
+                  // Drop Down menu for selecting countries
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: FormField<String>(
@@ -150,7 +150,7 @@ class _StatesState extends State<States> {
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.green.shade400),
                         onPressed: () => createStateData(
-                            deptName, _currentSelectedValuetwo, statusValue),
+                            stateName, _currentSelectedValuetwo, statusValue),
                         child: const Center(
                           child: Text(
                             "Submit",
